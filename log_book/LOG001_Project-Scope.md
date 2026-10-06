@@ -182,6 +182,32 @@ The paper argues that feature extraction in earlier models produces many feature
 
 **Note:** GFLOPs = billions of floating-point operations; NMS = non-maximum suppression. The reported performance differences relative to the original models are retained as approximately 1.4% and 2.4%. The log does not identify the associated metric or clarify whether these values refer to relative percentages or percentage points.
 
+## Decisions
+
+### Dataset
+
+#### Rationale
+
+Based on the preliminary assessment, the reviewed studies primarily evaluate model performance using basic quantitative metrics. They provide limited analysis of the morphological characteristics for which models perform well or poorly, including the features that distinguish ALL subtypes. This limits understanding of the models' capabilities beyond their reported scores.
+
+ALL-IDB1 currently provides object-center annotations rather than the bounding-box annotations required for YOLO object detection. The dataset must therefore be reannotated in YOLO format before conducting detection experiments.
+
+#### Decision
+
+1. **Reannotate ALL-IDB1 for object detection.** Create bounding-box annotations in YOLO format to support model training and evaluation.
+
+2. **Extend the work to ALL subtype recognition in the future.** This will support a more detailed evaluation of model strengths and limitations in relation to subtype-specific characteristics.
+
+### Model
+
+#### Rationale
+
+YOLO26 is expected to offer high detection performance and improved computational efficiency. These anticipated benefits make it a promising candidate for inference under limited computational resources and justify its experimental evaluation.
+
+#### Decision
+
+Evaluate YOLO26 and compare it with other representative YOLO models on the reannotated ALL-IDB1 dataset. Assess detection performance and computational efficiency to determine whether the expected benefits are achieved.
+
 ## References
 
 1. **Paper 1.** Emma Chen, Rory Liao, Mikhail Y. Shalaginov, and Tingying Helen Zeng (2022). *Real-time Detection of Acute Lymphoblastic Leukemia Cells Using Deep Learning*. In *2022 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)*, pp. 3788–3790. DOI: `10.1109/BIBM55620.2022.9995131`.
