@@ -104,14 +104,14 @@ These points are **reference keypoint annotations for relabeling**. They are not
 
 ### Python converter and prepared files
 
-The proposed converter is [xyc_to_xanylabeling_points.py](/Users/le/Documents/Codex/2026-10-07/hya/outputs/xyc_to_xanylabeling_points.py). It requires Python and Pillow. It checks coordinate syntax and bounds, verifies image readability, checks duplicate annotation consistency, skips exact duplicate files using SHA-256, and verifies that copied images remain byte-identical. It refuses to overwrite a nonempty output directory to protect manual annotation work.
+The proposed converter is [ALLIDB1_relabeling.py](https://github.com/raven-172/ALL-Det_raven172/blob/main/dataset/ALLIDB1_relabeling.py). It requires Python and Pillow. It checks coordinate syntax and bounds, verifies image readability, checks duplicate annotation consistency, skips exact duplicate files using SHA-256, and verifies that copied images remain byte-identical. It refuses to overwrite a nonempty output directory to protect manual annotation work.
 
 To create another workspace, run:
 
 ```bash
 python3 /Users/le/Documents/Codex/2026-10-07/hya/outputs/xyc_to_xanylabeling_points.py \
-  --dataset /Users/le/Desktop/ALLDet/dataset/ALL_IDB1 \
-  --output /Users/le/Documents/Codex/2026-10-07/hya/outputs/ALL_IDB1_points_new
+  --dataset /your_sources_of_your_dataset/
+  --output /your_place_you_want_to_save_output/
 ```
 
 Add `--dry-run` to validate the data and display the counts without writing files.
