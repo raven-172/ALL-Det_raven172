@@ -14,7 +14,17 @@ Center coordinates alone were insufficient for YOLO detection, so the target cel
 
 ## Processing and Reproduction
 
-1. Obtain ALL-IDB1 through the [official dataset instructions](https://scotti.di.unimi.it/all/). The source folder must contain `im/` for images and `xyc/` for centroid files.
+### Obtaining ALL-IDB1
+
+1. Visit the [official ALL-IDB website](https://scotti.di.unimi.it/all/) and download the [application form](https://scotti.di.unimi.it/all/form_ALL-IDB.pdf).
+2. Fill in the form manually, sign it, and scan the signed document.
+3. Email the scanned form to **Fabio Scotti** at [fabio.scotti@unimi.it](mailto:fabio.scotti@unimi.it). The maintainer will provide access instructions after receiving the signed form.
+
+**Why the dataset is not provided directly:** Clause 2 of the [ALL-IDB license agreement](https://scotti.di.unimi.it/all/form_ALL-IDB.pdf) requires explicit maintainer authorization to redistribute the dataset, including any part of it. Readers should therefore request access directly through the official procedure.
+
+### Reproducing the Processing
+
+1. Prepare the downloaded source folder with `im/` for images and `xyc/` for centroid files.
 2. From the repository root, install Pillow and run the [preparation script](ALLIDB1_relabeling.py):
 
    ```bash
