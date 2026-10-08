@@ -1,0 +1,22 @@
+# Python Virtual Environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Training outputs
+runs/
+wandb/
+
+# Model weights
+*.pt
+*.pth
+
+# Environment variables
+.env
