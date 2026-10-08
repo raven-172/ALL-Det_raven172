@@ -22,3 +22,15 @@ The system is intended as a **screening and decision-support tool**, not as a re
 - U.S. Food and Drug Administration (2023) *AI100 with Shonit*, K221309.
 - U.S. Food and Drug Administration (2024) *Scopio Full Field Bone Marrow Aspirate Application*, DEN230034.
 - World Health Organization (2024) *WHO Compendium of Innovative Health Technologies for Low-Resource Settings 2024*.
+
+
+CPU
+12th Gen Intel(R) Core(TM) i7-12700K 20 cores
+RAM
+28GB
+CUDA
+4608
+SSD
+1600GB
+Net
+1Gbps
